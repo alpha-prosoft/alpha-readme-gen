@@ -5,8 +5,14 @@ import subprocess
 import base64
 import os
 import shutil
+import os.path
 
-readme = open('src/README.md', 'r')
+source = 'src/README.md'
+if not os.path.isfile(source):
+    print("No %s file found" % (source))
+    exit 1
+
+readme = open(source, 'r')
 lines = readme.readlines()
 
 count = 0
