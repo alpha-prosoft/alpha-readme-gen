@@ -12,7 +12,7 @@ import sys
 from urllib.request import urlopen
 
 
-source = 'src/README.md'
+source = 'resource/README.md'
 if not os.path.isfile(source):
     print("No %s file found" % (source))
     sys.exit(1)
