@@ -1,6 +1,6 @@
 # Render PlantUML diagram in readme
 
-Place README.md in src/ directory and add gen.sh file containing folowing code in root fo your repo: 
+Place README.md in resources/ directory and add gen.sh file containing folowing code in root fo your repo: 
 ```bash
 #!/usr/bin/env bash
 python3 <(curl -s -L https://git.io/JTHXw)
