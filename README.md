@@ -8,14 +8,16 @@ python3 <(curl -s -L https://git.io/JTHXw)
 
 Put our PlantUML diagrams in README file: 
 
-```puml
-@startuml
-Class01 <|-- Class02
-Class03 *-- Class04
-Class05 o-- Class06
-Class07 .. Class08
-Class09 -- Class10
-@enduml
+```
+    ```puml
+    @startuml
+    Class01 <|-- Class02
+    Class03 *-- Class04
+    Class05 o-- Class06
+    Class07 .. Class08
+    Class09 -- Class10
+    @enduml
+    ```
 ```
 
 You can use InteliJ plugin and it will render diagram four you during development. 
