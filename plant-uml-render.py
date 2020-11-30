@@ -17,14 +17,8 @@ if not os.path.isfile(source):
     print("No %s file found" % (source))
     sys.exit(1)
 
-plantuml_jar = tempfile.gettempdir() + "/plantuml.jar"
-if not os.path.isfile(plantuml_jar):
-  filedata = urlopen('https://github.com/alpha-prosoft/alpha-readme-gen/raw/master/plantuml.jar')
-  datatowrite = filedata.read()
-
-  with open(plantuml_jar, 'wb') as f:
-    f.write(datatowrite)
-
+lantuml_jar = sys.argv[1]
+print("PlantUML jar: " + plantuml_jar)
 
 readme = open(source, 'r')
 lines = readme.readlines()

@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
-python3 <(curl -s -L https://git.io/JTHXw)
+plant_uml=$(mktemp)
+curl $plant_uml -k -s -L https://github.com/alpha-prosoft/alpha-readme-gen/raw/master/plantuml.jar
+python3 <(curl -s -L https://raw.githubusercontent.com/alpha-prosoft/alpha-readme-gen/main/plant-uml-render.py) $plant_uml
