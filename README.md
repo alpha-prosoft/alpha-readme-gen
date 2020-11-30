@@ -3,7 +3,9 @@
 Place README.md in resources/ directory and add gen.sh file containing folowing code in root fo your repo: 
 ```bash
 #!/usr/bin/env bash
-python3 <(curl -s -L https://git.io/JTHXw)
+plant_uml="$(mktemp).jar"
+curl -o $plant_uml -k -s -L https://raw.githubusercontent.com/alpha-prosoft/alpha-readme-gen/master/plantuml.jar
+python3 <(curl -s -L https://raw.githubusercontent.com/alpha-prosoft/alpha-readme-gen/master/plant-uml-render.py) $plant_uml```
 ```
 
 Put our PlantUML diagrams in README file: 
