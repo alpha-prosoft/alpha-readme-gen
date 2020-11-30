@@ -17,7 +17,7 @@ if not os.path.isfile(source):
     print("No %s file found" % (source))
     sys.exit(1)
 
-lantuml_jar = sys.argv[1]
+plantuml_jar = sys.argv[1]
 print("PlantUML jar: " + plantuml_jar)
 
 readme = open(source, 'r')
