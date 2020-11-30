@@ -19,7 +19,7 @@ if not os.path.isfile(source):
 
 plantuml_jar = tempfile.gettempdir() + "/plantuml.jar"
 if not os.path.isfile(plantuml_jar):
-  filedata = urlopen('https://github.com/alpha-prosoft/alpha-readme-gen/raw/main/plantuml.jar')
+  filedata = urlopen('https://github.com/alpha-prosoft/alpha-readme-gen/raw/master/plantuml.jar')
   datatowrite = filedata.read()
 
   with open(plantuml_jar, 'wb') as f:
