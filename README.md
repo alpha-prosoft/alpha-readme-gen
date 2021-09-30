@@ -35,5 +35,13 @@ Then run:
 ```
 ./gen.sh
 ```
+# Requirements for ubuntu
+```
+sudo apt-get install openjdk-17-jdk (Actually any JDK will do=
+sudo apt install graphviz
+sudo mkdir -p /opt/local/bin
+sudo ln -s /usr/bin/dot /opt/local/bin/dot
 
-It will analyze your `src/README.md` file and genearete `README.md` in root of the project. 
+```
+It will analyze files in src/*.md and generate files on root with svg rendered
+diagrams
