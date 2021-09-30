@@ -32,14 +32,14 @@ def process_file(source, name):
     out = open(name, "w")
     for line in lines:
         if line == "```\n" and diagram == True:
-            print("Renderng diagram: %s" % (diagram_file.name))
+            print("Rendering diagram: %s" % (diagram_file.name))
             diagram_file.flush()
             diagram_file.close()
-            proc = subprocess.Popen(["java", "-jar", plantuml_jar, diagram_file.name, "-tsvg"], \
+            proc = subprocess.Popen(["java", "-jar", plantuml_jar, diagram_file.name, "-tpng"], \
                                     stdout=subprocess.PIPE)
             proc.wait()
 
-            out.write("\n>![Diagram](diagrams/" + str(diagram_number) + ".svg)")
+            out.write("\n>![Diagram](diagrams/" + str(diagram_number) + ".png)")
             diagram = False
 
         elif line.startswith("```puml"):

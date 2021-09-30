@@ -25,7 +25,7 @@ Put our PlantUML diagrams in README file:
 Will genereate:
 
 
->![Diagram](diagrams/1.svg)
+>![Diagram](diagrams/1.png)
 
 
 You can use InteliJ plugin and it will render diagram four you during development. 
