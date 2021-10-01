@@ -19,13 +19,14 @@ print("PlantUML jar: " + plantuml_jar)
 shutil.rmtree("diagrams", ignore_errors=True)
 os.mkdir("diagrams")
 
+
+diagram_number = 0
 def process_file(source, name):
     print("Processing %s and generating %s" %(source, name))
     readme = open(source, 'r')
     lines = readme.readlines()
 
     diagram = False
-    diagram_number = 0
 
     diagram_file = None
 
