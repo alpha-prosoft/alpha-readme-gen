@@ -13,10 +13,6 @@ Put our PlantUML diagrams in README file:
 ```
     ```puml
     @startuml
-    Class01 <|-- Class02
-    Class03 *-- Class04
-    Class05 o-- Class06
-    Class07 .. Class08
     Class09 -- Class10
     @enduml
     ```
@@ -24,8 +20,12 @@ Put our PlantUML diagrams in README file:
 
 Will genereate:
 
+```puml
+@startuml
+Class09 -- Class10
+@enduml
+```
 
->![Diagram](diagrams/README.md_1.png)
 
 
 You can use InteliJ plugin and it will render diagram four you during development. 
