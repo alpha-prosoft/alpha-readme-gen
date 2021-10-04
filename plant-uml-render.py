@@ -20,6 +20,17 @@ shutil.rmtree("diagrams", ignore_errors=True)
 os.mkdir("diagrams")
 
 
+def write_diagram(out, md_name, diagram_file, diagram_number):
+    print("Rendering diagram: %s" % (diagram_file.name))
+    diagram_file.flush()
+    diagram_file.close()
+    proc = subprocess.Popen(["java", "-jar", plantuml_jar, diagram_file.name, "-tpng"], \
+                                     stdout=subprocess.PIPE)
+    proc.wait()
+
+    out.write("\n>![Diagram](diagrams/" + md_name + "_" + str(diagram_number) + ".png)\n")
+
+
 def process_file(source, md_name):
     print("Processing %s and generating %s" %(source, md_name))
     readme = open(source, 'r')
@@ -33,16 +44,8 @@ def process_file(source, md_name):
     out = open(md_name, "w")
     for line in lines:
         if line == "```\n" and diagram == True:
-            print("Rendering diagram: %s" % (diagram_file.name))
-            diagram_file.flush()
-            diagram_file.close()
-            proc = subprocess.Popen(["java", "-jar", plantuml_jar, diagram_file.name, "-tpng"], \
-                                    stdout=subprocess.PIPE)
-            proc.wait()
-
-            out.write("\n>![Diagram](diagrams/" + md_name + "_" + str(diagram_number) + ".png)\n")
+            write_diagram(out, md_name,  diagram_file, diagram_number)
             diagram = False
-
         elif line.startswith("```puml"):
             print("Found diagram")
             diagram_number += 1
@@ -53,7 +56,8 @@ def process_file(source, md_name):
             diagram_file.write(line)
         else:
             out.write(line)
-
+    if diagram == True:
+       write_diagram(out, md_name,  diagram_file, diagram_number)
     out.close()
     readme.close()
 

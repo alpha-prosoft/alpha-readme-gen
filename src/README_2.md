@@ -25,8 +25,17 @@ Will genereate:
 Class09 -- Class10
 @enduml
 ```
+```puml
+@startuml
+Class09 -- Class10
+@enduml
+```
 
-
+```puml
+@startuml
+Class09 -- Class10
+@enduml
+```
 
 You can use InteliJ plugin and it will render diagram four you during development. 
 
@@ -45,3 +54,8 @@ sudo ln -s /usr/bin/dot /opt/local/bin/dot
 ```
 It will analyze files in src/*.md and generate files on root with svg rendered
 diagrams
+```puml
+@startuml
+Class09 -- Class10
+@enduml
+```

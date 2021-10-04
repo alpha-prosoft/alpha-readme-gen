@@ -23,7 +23,10 @@ Will genereate:
 
 >![Diagram](diagrams/README_2.md_1.png)
 
+>![Diagram](diagrams/README_2.md_2.png)
 
+
+>![Diagram](diagrams/README_2.md_3.png)
 
 You can use InteliJ plugin and it will render diagram four you during development. 
 
@@ -42,3 +45,5 @@ sudo ln -s /usr/bin/dot /opt/local/bin/dot
 ```
 It will analyze files in src/*.md and generate files on root with svg rendered
 diagrams
+
+>![Diagram](diagrams/README_2.md_4.png)
