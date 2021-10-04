@@ -27,7 +27,6 @@ Will genereate:
 
 >![Diagram](diagrams/README.md_1.png)
 
-
 You can use InteliJ plugin and it will render diagram four you during development. 
 
 Then run: 

@@ -34,8 +34,6 @@ Class09 -- Class10
 @enduml
 ```
 
-
-
 You can use InteliJ plugin and it will render diagram four you during development. 
 
 Then run: 

@@ -40,7 +40,7 @@ def process_file(source, md_name):
                                     stdout=subprocess.PIPE)
             proc.wait()
 
-            out.write("\n>![Diagram](diagrams/" + md_name + "_" + str(diagram_number) + ".png)")
+            out.write("\n>![Diagram](diagrams/" + md_name + "_" + str(diagram_number) + ".png)\n")
             diagram = False
 
         elif line.startswith("```puml"):
